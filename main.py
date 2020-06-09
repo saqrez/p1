@@ -19,6 +19,7 @@ from bokeh.models import LinearAxis, Range1d
 # from scripts.ols import ols
 
 import sys, os
+from os.path import dirname, join
 import numpy as np
 import pandas as pd
 import pandasql as ps
@@ -77,7 +78,7 @@ futuredf['weekend'] = futuredf['date'].apply(daytype__Week_End)
     
 
 #######################################################################################
-data_ols=pd.read_pickle("./data.pkl")
+data_ols = pd.read_pickle(join(dirname(__file__), 'data', 'data.pkl')).dropna()
 data_ols['date_fld']=pd.to_datetime(data_ols['date_fld'])
 data_ols['tot_qty'] = pd.to_numeric(data_ols['tot_qty'])
 data_ols['discount'] = pd.to_numeric(data_ols['discount'])
