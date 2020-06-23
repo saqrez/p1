@@ -28,7 +28,7 @@ from os.path import dirname, join
 import numpy as np
 import pandas as pd
 import pandasql as ps
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import timeit
 import datetime
 from datetime import date
@@ -41,8 +41,8 @@ from pandasql import sqldf
 from scripts.forecast import forecast
 from scripts.category import categ
 
-from flask import Flask, render_template, request
-app = Flask(__name__)
+#from flask import Flask, render_template, request
+#app = Flask(__name__)
 
 
 
